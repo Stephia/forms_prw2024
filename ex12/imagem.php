@@ -17,7 +17,7 @@
         $dados = htmlspecialchars($dados); // Converte caracteres especiais em entidades HTML
         return $dados;
     }
-
+    
     // Recebe e valida o nome da pasta
     $nome_pasta = validar_dados($_POST["nome_pasta"]);
 
@@ -25,7 +25,7 @@
     $num_imagens = isset($_POST["num_imagens"]) ? intval($_POST["num_imagens"]) : 0;
 
     // Caminho da pasta dentro de htdocs (considerando 2 níveis acima)
-    $caminho_pasta = '../../../../htdocs/' . $nome_pasta . '/';
+    $caminho_pasta = '..\../htdocs/' . $nome_pasta . '/';
 
     // Array para armazenar nomes de arquivos
     $arquivos = array();
